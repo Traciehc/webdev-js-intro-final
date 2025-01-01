@@ -37,7 +37,7 @@ All elements that will be referenced in `app.js` will have an id. Read through `
 
 If you get stuck, write psuedocode and break the game's functionality and logic into smaller pieces.
 
-- [ ] The span with the id of `guess-message` should output whether the guess is too high, too low, if the player won, or if the player lost.
+- [X] The span with the id of `guess-message` should output whether the guess is too high, too low, if the player won, or if the player lost.
 - [ ] The span with the id of `current-guess` should output the guess that was just submitted.
 - [ ] The span with the id of `computer-guess` should output the guess that was randomly generated.
 - [ ] The span with the id of `guess-history` should output your guess history.
