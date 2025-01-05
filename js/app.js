@@ -23,6 +23,8 @@ submissionBtn.addEventListener("click", () => {
       guessMessageElement.textContent = "Please enter a valid number between 1 and 50.";
       return;
     }
+    guessHistory.push(playerGuess);
+    currentGuessElement.textContent = playerGuess;
   
     if (playerGuess === computerNumber) {
       guessMessageElement.textContent = "Congratulations! You guessed the correct number!";
@@ -43,4 +45,8 @@ submissionBtn.addEventListener("click", () => {
       }
     }
   });
+
+  guessMessageElement.textContent = "";
+  currentGuessElement.textContent = "";
+
   
