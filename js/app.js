@@ -25,7 +25,8 @@ submissionBtn.addEventListener("click", () => {
     }
     guessHistory.push(playerGuess);
     currentGuessElement.textContent = playerGuess;
-  
+    computerGuessElement.textContent = computerNumber;
+
     if (playerGuess === computerNumber) {
       guessMessageElement.textContent = "Congratulations! You guessed the correct number!";
       endGame();
