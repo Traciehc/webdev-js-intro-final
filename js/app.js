@@ -48,5 +48,8 @@ submissionBtn.addEventListener("click", () => {
 
   guessMessageElement.textContent = "";
   currentGuessElement.textContent = "";
+  computerGuessElement.textContent = "";
+
+
 
   
