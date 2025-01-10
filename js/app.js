@@ -44,16 +44,30 @@ submissionBtn.addEventListener("click", () => {
         endGame();
       } else {
         guessMessageElement.textContent += ` You have ${attemptsLeft} attempts left.`;
-        computerNumber = getRandomNumber(1, 50); // Generate a new number after an incorrect guess
-3
+        computerNumber = getRandomNumber(1, 50);
       }
     }
   });
 
-  guessMessageElement.textContent = "";
-  currentGuessElement.textContent = "";
-  computerGuessElement.textContent = "";
-  guessHistoryElement.textContent = "";
-
+  restartBtn.addEventListener("click", () => {
+    computerNumber = getRandomNumber(1, 50);
+    guessHistory = [];
+    attemptsLeft = 3;
+    
+    guessMessageElement.textContent = "";
+    currentGuessElement.textContent = "";
+    computerGuessElement.textContent = "";
+    guessHistoryElement.textContent = "";
+    guessInput.value = ""; 
+    
+    submissionBtn.disabled = false; 
+   
+  });
+  
+  function endGame() {
+    submissionBtn.disabled = true; 
+    
+  }
+  
 
   
