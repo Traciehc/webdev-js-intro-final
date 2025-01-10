@@ -28,7 +28,7 @@ submissionBtn.addEventListener("click", () => {
     computerGuessElement.textContent = computerNumber;
 
     if (playerGuess === computerNumber) {
-      guessMessageElement.textContent = "Congratulations! You guessed the correct number!";
+      guessMessageElement.textContent = "Congratulations You Won! You guessed the correct number!";
       endGame();
     } else {
       attemptsLeft -= 1;
@@ -39,7 +39,7 @@ submissionBtn.addEventListener("click", () => {
       }
   
       if (attemptsLeft === 0) {
-        guessMessageElement.textContent = "Game over! You've used all your attempts.";
+        guessMessageElement.textContent = "Game over! You've lost and used all your attempts.";
         endGame();
       } else {
         guessMessageElement.textContent += ` You have ${attemptsLeft} attempts left.`;
