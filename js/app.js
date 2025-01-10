@@ -61,12 +61,13 @@ submissionBtn.addEventListener("click", () => {
     guessInput.value = ""; 
     
     submissionBtn.disabled = false; 
-   
+    restartBtn.disabled = true;
   });
   
   function endGame() {
     submissionBtn.disabled = true; 
-    
+    restartBtn.disabled = false;
+
   }
   
 
