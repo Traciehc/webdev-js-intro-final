@@ -26,6 +26,7 @@ submissionBtn.addEventListener("click", () => {
     guessHistory.push(playerGuess);
     currentGuessElement.textContent = playerGuess;
     computerGuessElement.textContent = computerNumber;
+    guessHistoryElement.textContent = guessHistory.join(", ");
 
     if (playerGuess === computerNumber) {
       guessMessageElement.textContent = "Congratulations You Won! You guessed the correct number!";
@@ -43,6 +44,8 @@ submissionBtn.addEventListener("click", () => {
         endGame();
       } else {
         guessMessageElement.textContent += ` You have ${attemptsLeft} attempts left.`;
+        computerNumber = getRandomNumber(1, 50); // Generate a new number after an incorrect guess
+3
       }
     }
   });
@@ -50,7 +53,7 @@ submissionBtn.addEventListener("click", () => {
   guessMessageElement.textContent = "";
   currentGuessElement.textContent = "";
   computerGuessElement.textContent = "";
-
+  guessHistoryElement.textContent = "";
 
 
   
